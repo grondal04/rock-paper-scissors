@@ -57,19 +57,22 @@ function playRound(humanChoice, computerChoice) {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    
-    for (let i = 0; i < 3; i++) {
+    playGame();
+});
+
+function playGame() {
+    for (let i = 0; i < 5; i++) {
         let choice1 = getComputerChoice();
         let choice2  = getHumanChoice();
     
         playRound(choice2, choice1);
 
-        if (humanScore >= 2) break;
+        if (humanScore >= 4) break;
     }
 
-    if (humanScore > computerScore || humanScore >= 2) {
+    if (humanScore > computerScore || humanScore >= 3) {
         console.log("Overally, you win.");
     } else {
         console.log("Overally, you lose.");
     }
-});
+}
