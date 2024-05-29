@@ -18,6 +18,9 @@ function translateNumber(number) {
 //0 -> Rock; 1 -> Paper; Scissors -> 2
 
 function comparison(choiceA, choiceB) {
+    if (choiceA === choiceB)
+        return -1;
+
     if ((choiceB - choiceA) % 2 === 0) 
         return choiceB > choiceA ? choiceA : choiceB;
     return choiceB > choiceA ? choiceB : choiceA;
@@ -38,16 +41,47 @@ function getComputerChoice() {
     return number;
 }
 
+function logDraw() {
+
+    let logMessage = "Draw! No one win";
+
+    console.log(logMessage);
+
+    var h2Element = document.createElement("h2");
+    h2Element.textContent = logMessage;
+    var container = document.getElementById("container");
+    container.appendChild(h2Element);
+}
+
 function logResultWinPlayer(playerChoice, computerChoice) {
-    console.log("You Win! " + translateNumber(playerChoice) + " beats " + translateNumber(computerChoice))
+
+    let logMessage = "You Win! " + translateNumber(playerChoice) + " beats " + translateNumber(computerChoice);
+    console.log(logMessage)
+
+    let h2Element = document.createElement("h2");
+    h2Element.textContent = logMessage;
+    let container = document.getElementById("container");
+    container.appendChild(h2Element);
 }
 
 function logResultLostPlayer(playerChoice, computerChoice) {
-    console.log("You Lost! " + translateNumber(computerChoice) + " beats " + translateNumber(playerChoice))
+
+    let logMessage = "You Lost! " + translateNumber(computerChoice) + " beats " + translateNumber(playerChoice);
+    console.log(logMessage)
+
+    let h2Element = document.createElement("h2");
+    h2Element.textContent = logMessage;
+    let container = document.getElementById("container");
+    container.appendChild(h2Element);
 }
 
 function playRound(humanChoice, computerChoice) {
-    if (comparison(humanChoice, computerChoice) === humanChoice) {
+    let comparisonRs = comparison(humanChoice, computerChoice);
+
+    if (comparisonRs === -1) {
+        logDraw();
+    }
+    else if (comparisonRs) {
         logResultWinPlayer(humanChoice, computerChoice);
         humanScore++;
     } else {
@@ -66,13 +100,19 @@ function playGame() {
         let choice2  = getHumanChoice();
     
         playRound(choice2, choice1);
-
-        if (humanScore >= 4) break;
     }
 
-    if (humanScore > computerScore || humanScore >= 3) {
-        console.log("Overally, you win.");
+    let logMessage = ''
+    if (humanScore > computerScore) {
+        logMessage = 'Overrally, you win!'
     } else {
-        console.log("Overally, you lose.");
+        logMessage = 'Overraly, you lose!'
     }
+
+    console.log(logMessage)
+    let h2Element = document.createElement("h2");
+    h2Element.textContent = logMessage;
+    h2Element.style.color = 'red'
+    let container = document.getElementById("container");
+    container.appendChild(h2Element);
 }
