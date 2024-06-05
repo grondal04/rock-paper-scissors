@@ -135,8 +135,6 @@ button#continue {
     
     object-fit: cover;
     overflow: hidden;
-
-    transition: all 1s ease-in-out;
 }
 
 
@@ -168,5 +166,29 @@ button#continue {
 }
 
 #continue:hover {
+    cursor: pointer;
+}
+
+button#restart {
+    border: 2px solid #000;
+    background: #FFF;
+    box-shadow: 4px -7px 0px 0px #C2C2C2 inset, 4px 4px 0px 0px #000;
+
+    width: 204px;
+    height: 63px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: 'Shrikhand';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    display: none;
+}
+
+button#restart:hover {
+    background-color: black;
+    color: white;
     cursor: pointer;
 }

@@ -45,7 +45,7 @@ function playRound(humanChoice) {
     if (comparisonRs === -1) {
         logResultDraw();
     }
-    else if (comparisonRs) {
+    else if (comparisonRs === humanChoice) {
         logResultWinPlayer();
         setWinningBackground();
         humanScore++;
@@ -155,4 +155,39 @@ function logResultLostPlayer() {
 function updateScore() {
     DOC_aiScore.textContent = computerScore;
     DOC_humanScore.textContent = humanScore;
+}
+
+function updateRedscore() {
+    if (computerScore >= 5) {
+        DOC_aiScore.style.color = 'red';
+    } else if (humanScore >= 5) {
+        DOC_humanScore.style.color = 'red';
+    }
+}
+
+function showBtnRestart() {
+    btnRestart.style.display = 'block';
+}
+
+function hideBtnRestart() {
+    btnRestart.style.display = 'none';
+}
+
+function hideBtnContinue() {
+    btnContinue.style.display = 'none';
+}
+
+function displayFinalResult() {
+    let endResult = '';
+    if (computerScore === humanScore === 5)
+        endResult = 'DRAW';
+    if (computerScore >= 5)
+        endResult = PLAYER_LOSE_OVERALL;
+    else if (humanScore >= 5)
+        endResult = PLAYER_WIN_OVERALL;
+
+    resultH2.textContent = endResult;
+    resultH2.style.letterSpacing = '0rem';
+    let container = document.querySelector('.container');
+    container.style.justifyContent = 'center';
 }

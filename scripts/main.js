@@ -15,10 +15,13 @@ const NORMAL_COLOR = '#9DCAFF';
 const LOSING_COLOR = '#FF9DE9';
 const WINNING_COLOR = '#A4EE98';
 
+const PLAYER_WIN_OVERALL = "CONGRATS, YOU WIN 5 ROUNDS!"
+const PLAYER_LOSE_OVERALL = "YOU LOST 5 ROUNDS, LOSER!"
+
 var btnRock, btnPaper, btnScissors;
 var humanGameplayAnim, robotGameplayAnim;
 
-var btnContinue;
+var btnContinue, btnRestart;
 
 var armRobot, palmRobot, armHuman, palmHuman;
 var credit;
@@ -44,6 +47,7 @@ document.addEventListener("DOMContentLoaded", (event) => {
     resultH2 = document.querySelector('#result h2');
 
     btnContinue = document.getElementById('continue');
+    btnRestart = document.getElementById('restart');
 
     hideAnim();
 
@@ -66,12 +70,24 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     btnContinue.addEventListener('click', function() {
         
-        setBackgroundToNormal();
-        showAllBtn();
-        hideAnim();
-        showDefaultArms();
-        showCredit();
-        hideResult();
-        
+        if (humanScore < 5 && computerScore < 5) {
+            setBackgroundToNormal();
+            showAllBtn();
+            hideAnim();
+            showDefaultArms();
+            showCredit();
+            hideResult();
+        } else { // END GAME AFTER 5 ROUNDS
+            hideAnim();
+            updateRedscore();
+            displayFinalResult();
+            
+            showBtnRestart();
+            hideBtnContinue();
+        }
+    })
+
+    btnRestart.addEventListener('click', function() {
+        location.reload();
     })
 })
