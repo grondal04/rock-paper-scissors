@@ -3,13 +3,13 @@ const ROCK = 0;
 const PAPER = 1;
 const SCISSORS = 2;
 
-const ROBOT_ROCK_ANIM_SRC = 'grondal.site/RPS_ASSETS/robot-rock.gif'
-const ROBOT_PAPER_ANIM_SRC = 'grondal.site/RPS_ASSETS/robot-paper.gif'
-const ROBOT_SCISSORS_ANIM_SRC = 'grondal.site/RPS_ASSETS/robot-scissors.gif'
+const ROBOT_ROCK_ANIM_SRC = 'http://grondal.site/RPS_ASSETS/robot-rock.gif'
+const ROBOT_PAPER_ANIM_SRC = 'http://grondal.site/RPS_ASSETS/robot-paper.gif'
+const ROBOT_SCISSORS_ANIM_SRC = 'http://grondal.site/RPS_ASSETS/robot-scissors.gif'
 
-const HUMAN_ROCK_ANIM_SRC = 'grondal.site/RPS_ASSETS/human-rock.gif'
-const HUMAN_PAPER_ANIM_SRC = 'grondal.site/RPS_ASSETS/human-paper.gif'
-const HUMAN_SCISSORS_ANIM_SRC = 'grondal.site/RPS_ASSETS/human-scissors.gif'
+const HUMAN_ROCK_ANIM_SRC = 'http://grondal.site/RPS_ASSETS/human-rock.gif'
+const HUMAN_PAPER_ANIM_SRC = 'http://grondal.site/RPS_ASSETS/human-paper.gif'
+const HUMAN_SCISSORS_ANIM_SRC = 'http://grondal.site/RPS_ASSETS/human-scissors.gif'
 
 const NORMAL_COLOR = '#9DCAFF';
 const LOSING_COLOR = '#FF9DE9';
