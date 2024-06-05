@@ -91,7 +91,7 @@ function playRound(humanChoice, computerChoice) {
 }
 
 document.addEventListener("DOMContentLoaded", (event) => {
-    playGame();
+    //  playGame();
 });
 
 function playGame() {

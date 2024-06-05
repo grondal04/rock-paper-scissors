@@ -1,0 +1,64 @@
+* {
+    margin: 0;
+    padding: 0;
+
+    font-family: "Seymour One", sans-serif;
+    font-style: normal;
+
+}
+
+body {
+    background-color: #9DCAFF;
+    overflow: hidden;
+}
+
+#credit {
+    margin-top: 1rem;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 3rem;
+
+    height: 80vh;
+}
+
+.score-display {
+    display: flex;
+    justify-content: center;
+    gap: 10rem;
+}
+
+.player-choice-container {
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    gap: 1rem;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    display: none;
+}
+
+#hands {
+    position: relative;
+}
+
+#hands img {
+    position: absolute;
+    z-index: -1;
+
+    overflow-x: hidden;
+}

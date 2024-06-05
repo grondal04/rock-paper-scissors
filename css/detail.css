@@ -1,0 +1,194 @@
+.palm-robot {
+    left: 180px;
+    top: -50px;
+}
+
+.arm-robot {
+    left: 0px;
+    top: 200px;
+}
+
+.palm-human {
+    right: 30px;
+    top: -120px;
+}
+
+.arm-human {
+    right: -30px;
+    top: 200px;
+}
+
+.robot-gameplay {
+    left: -700px;
+    top: -190px;
+}
+.human-gameplay {
+    right: -750px;
+    top: -190px;
+}
+
+h1 {
+    color: #FFF;
+    text-align: center;
+    
+    /* 1 */
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: "Seymour One";
+    font-size: 2rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+h2 {
+    color: #FFF;
+    text-align: center;
+
+    /* 1 */
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: "Seymour One";
+    font-size: 96px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -9.6px;
+}
+
+button#continue {
+    border: 2px solid #000;
+    background: #FFF;
+    box-shadow: 4px -7px 0px 0px #C2C2C2 inset, 4px 4px 0px 0px #000;
+
+    width: 204px;
+    height: 63px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: 'Shrikhand';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#credit p {
+    text-align: center;
+    font-family: "Seymour One";
+    font-size: 1rem;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+#credit p a {
+    text-decoration: none;
+}
+
+
+.player .player-score {
+    color: #FFF;
+    text-align: center;
+
+    /* 1 */
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: "Seymour One";
+    font-size: 130px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+}
+
+.player .player-name {
+    color: #FFF;
+    text-align: center;
+    
+    /* 1 */
+    text-shadow: 4px 4px 0px #000;
+    -webkit-text-stroke-width: 2;
+    -webkit-text-stroke-color: #000;
+    font-family: "Seymour One";
+    font-size: 48px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: -4.8px;
+}
+
+.player-choice-container button {
+    background-color: inherit;
+    border: none;
+
+    padding: 0;
+    margin: 0;
+}
+
+.choice-option-image {
+    background-position: center bottom;
+
+    width: 220px;
+    height: 250px;
+    
+    object-fit: cover;
+    overflow: hidden;
+}
+
+
+#btn-rock .choice-option-image{
+    background-image: url('../assets/rock-idle.png');
+}
+
+#btn-rock .choice-option-image:hover {
+    background-image: url('../assets/rock-hover.png');
+    cursor: pointer;
+}
+
+#btn-paper .choice-option-image{
+    background-image: url('../assets/paper-idle.png');
+}
+
+#btn-paper .choice-option-image:hover {
+    background-image: url('../assets/paper-hover.png');
+    cursor: pointer;
+}
+
+#btn-scissors .choice-option-image{
+    background-image: url('../assets/scissors-idle.png');
+}
+
+#btn-scissors .choice-option-image:hover {
+    background-image: url('../assets/scissors-hover.png');
+    cursor: pointer;
+}
+
+#continue:hover {
+    cursor: pointer;
+}
+
+button#restart {
+    border: 2px solid #000;
+    background: #FFF;
+    box-shadow: 4px -7px 0px 0px #C2C2C2 inset, 4px 4px 0px 0px #000;
+
+    width: 204px;
+    height: 63px;
+    flex-shrink: 0;
+    color: #000;
+    font-family: 'Shrikhand';
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    display: none;
+}
+
+button#restart:hover {
+    background-color: black;
+    color: white;
+    cursor: pointer;
+}
