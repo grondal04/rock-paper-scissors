@@ -3,13 +3,13 @@ const ROCK = 0;
 const PAPER = 1;
 const SCISSORS = 2;
 
-const ROBOT_ROCK_ANIM_SRC = '../assets/gameplay/no-loop-count-clean/robot-rock.gif'
-const ROBOT_PAPER_ANIM_SRC = '../assets/gameplay/no-loop-count-clean/robot-paper.gif'
-const ROBOT_SCISSORS_ANIM_SRC = '../assets/gameplay/no-loop-count-clean/robot-scissors.gif'
+const ROBOT_ROCK_ANIM_SRC = './assets/gameplay/no-loop-count-clean/robot-rock.gif'
+const ROBOT_PAPER_ANIM_SRC = './assets/gameplay/no-loop-count-clean/robot-paper.gif'
+const ROBOT_SCISSORS_ANIM_SRC = './assets/gameplay/no-loop-count-clean/robot-scissors.gif'
 
-const HUMAN_ROCK_ANIM_SRC = '../assets/gameplay/no-loop-count-clean/human-rock.gif'
-const HUMAN_PAPER_ANIM_SRC = '../assets/gameplay/no-loop-count-clean/human-paper.gif'
-const HUMAN_SCISSORS_ANIM_SRC = '../assets/gameplay/no-loop-count-clean/human-scissors.gif'
+const HUMAN_ROCK_ANIM_SRC = './assets/gameplay/no-loop-count-clean/human-rock.gif'
+const HUMAN_PAPER_ANIM_SRC = './assets/gameplay/no-loop-count-clean/human-paper.gif'
+const HUMAN_SCISSORS_ANIM_SRC = './assets/gameplay/no-loop-count-clean/human-scissors.gif'
 
 const NORMAL_COLOR = '#9DCAFF';
 const LOSING_COLOR = '#FF9DE9';
